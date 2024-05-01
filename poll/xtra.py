@@ -84,8 +84,8 @@ def decrypt(password,token1,token2,salt):
 
 def sms(tonum,data):
 
-    account_sid = 'AC0d28fb7bbec4e0d523d0fb81065d635d'
-    auth_token = 'f28526c184d9000d88e5a5e17a90acba'
+    account_sid = 'Your ID'
+    auth_token = 'Your Token'
 
     client = Client(account_sid, auth_token)
     client.messages.create(from_='+18587712747',
