@@ -27,7 +27,7 @@ def otp_gen():
 
 def passPhrase():
     length = random.randint(6,11)
-    API_KEY = 'NZIolxWBXWnvA7LHxcI7eA==mIZGEtOMOl4qVST9'
+    API_KEY = 'Your Key'
     api_url = 'https://api.api-ninjas.com/v1/passwordgenerator?length={}'.format(length)
     response = requests.get(api_url, headers={'X-Api-Key': API_KEY })
     if response.status_code == requests.codes.ok:
@@ -88,8 +88,8 @@ def sms(tonum,data):
     auth_token = 'Your Token'
 
     client = Client(account_sid, auth_token)
-    client.messages.create(from_='+18587712747',
-                       to= '+919392315102',
+    client.messages.create(from_='Twilio number',
+                       to= 'Your Number',
                        body=data)
     
 def get_vote_auth():
